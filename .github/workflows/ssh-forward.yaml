@@ -162,7 +162,7 @@ jobs:
           echo "done"  >> ready.sh
           echo "echo \"ok\"" >> ready.sh
           chmod +x ./ready.sh
-          apt install curl
+          sudo apt install curl
           curl ipinfo.io
         env:
           SERVER_IP: ${{ secrets.SERVER_IP }}
